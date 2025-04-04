@@ -52,7 +52,8 @@ public class HomeController() : Controller
                                     new TodoItem
                                     {
                                         Id = reader.GetInt32(0),
-                                        Name = reader.GetString(1)
+                                        Name = reader.GetString(1),
+                                        CreatedAt = reader.GetDateTime(2)
                                     }
                                 );
                             }
@@ -93,6 +94,7 @@ public class HomeController() : Controller
                             reader.Read();
                             todo.Id = reader.GetInt32(0);
                             todo.Name = reader.GetString(1);
+                            todo.CreatedAt = reader.GetDateTime(2);
                         }
                         else
                         {

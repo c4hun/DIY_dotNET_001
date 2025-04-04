@@ -58,3 +58,4 @@
 /home/ch/Documents/A/Study/C_sharp/Todo_List/Todo/obj/Debug/net8.0/staticwebassets.build.endpoints.json
 /home/ch/Documents/A/Study/C_sharp/Todo_List/Todo/obj/Debug/net8.0/staticwebassets/msbuild.Todo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 /home/ch/Documents/A/Study/C_sharp/Todo_List/Todo/obj/Debug/net8.0/Todo.csproj.Up2Date
+/home/ch/Documents/A/Study/C_sharp/Todo_List/Todo/obj/Debug/net8.0/Todo.sourcelink.json

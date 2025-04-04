@@ -8,6 +8,7 @@
                 <tr class="table-primary">
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Created At</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +17,7 @@
                 <tr>
                     <td class="todos-column" scope="row">@t.Id</td>
                     <td class="todos-column">@t.Name</td>
+                    <td class="todos-column">@t.CreatedAt.ToLocalTime().ToString("HH:mm:ss MM-dd-yyyy")</td>
                     <td class="buttons-column">
                         <!-- and we have to handle the click events of that buttons with javascript; PROPERTY=>buttons-column; METHOD=>onclick  -->
                         <input type="submit" value="Delete" onclick="deleteTodo(@t.Id)"/>

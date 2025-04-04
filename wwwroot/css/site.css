@@ -45,3 +45,13 @@ body {
 .todos-column{
   vertical-align: middle;
 }
+
+.createdat-column {
+  color: #555;              
+  font-size: 0.875rem;      
+  opacity: 0.85;            
+  white-space: nowrap;      
+  font-style: italic;       
+  text-align: right;        
+  vertical-align: middle;
+}
