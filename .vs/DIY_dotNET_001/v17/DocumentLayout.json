@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Models\\Request\\EndTaskRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Request\\EndTaskRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|c:\\users\\kouka\\source\\repos\\c4hun\\diy_dotnet_001\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|c:\\users\\kouka\\source\\repos\\c4hun\\diy_dotnet_001\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|c:\\users\\kouka\\source\\repos\\c4hun\\diy_dotnet_001\\models\\request\\endtaskrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2BEBB86-84FD-DB26-135C-E5D63312FA91}|Todo.csproj|solutionrelative:models\\request\\endtaskrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +27,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-08T14:36:48.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAIwLUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:27:31.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EndTaskRequest.cs",
               "DocumentMoniker": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Models\\Request\\EndTaskRequest.cs",
               "RelativeDocumentMoniker": "Models\\Request\\EndTaskRequest.cs",
               "ToolTip": "C:\\Users\\Kouka\\source\\repos\\c4hun\\DIY_dotNET_001\\Models\\Request\\EndTaskRequest.cs",
               "RelativeToolTip": "Models\\Request\\EndTaskRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T13:53:06.701Z",
               "EditorCaption": ""

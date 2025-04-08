@@ -11,4 +11,6 @@ public class TodoItem
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
+    public bool IsEnded { get; set; } = false;
+
 }

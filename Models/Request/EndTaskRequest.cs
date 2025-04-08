@@ -4,5 +4,11 @@
     {
         public int Id { get; set; }
         public bool IsEnded { get; set; }
+
+        public void ToggleIsEnded()
+        {
+            IsEnded = !IsEnded;
+        }
+        
     }
 }

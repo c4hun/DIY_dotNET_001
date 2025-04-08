@@ -161,5 +161,21 @@ public class HomeController() : Controller
         return Json(new {});
     }
 
-    
+    [HttpPost]
+    public IActionResult ToggleIsEnded(int id)
+    {
+        using (var connection = new SqliteConnection("Data source=sqlite.db"))
+        {
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText = "UPDATE todo SET IsEnded = NOT IsEnded WHERE Id = @Id";
+                command.Parameters.AddWithValue("@Id", id);
+                command.ExecuteNonQuery();
+            }
+        }
+        return RedirectToAction("Index");
+    }
+
+
 }
