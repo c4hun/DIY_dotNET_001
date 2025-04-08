@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug/net8.0/Todo.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/Todo.AssemblyInfo.cs
+/.vs/DIY_dotNET_001/copilot-chat/593fce0c/sessions/6d1ff4fa-baaa-49a1-bdac-b2e26eb92151
+/.vs/DIY_dotNET_001/CopilotIndices/17.13.441.19478/CodeChunks.db-shm
+/.vs/DIY_dotNET_001/CopilotIndices/17.13.441.19478/CodeChunks.db-wal
+/.vs/DIY_dotNET_001/CopilotIndices/17.13.441.19478/SemanticSymbols.db-shm
+/.vs/DIY_dotNET_001/CopilotIndices/17.13.441.19478/SemanticSymbols.db-wal
+/.vs/DIY_dotNET_001/DesignTimeBuild/.dtbcache.v2
+/.vs/DIY_dotNET_001/FileContentIndex/2286985f-3152-4ad8-9224-ba4e0be6dac3.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/2560d11a-ce99-4e6e-9a9d-b681fb0c24ca.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/502ba15b-5062-4e74-9938-896ecf0a48d0.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/83a591ea-b8e6-40ed-8b5a-addd04041307.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/8c0562ee-206a-4bac-a1da-56e9ab5260ca.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/da03c3d7-a5b9-48c4-8d98-1363fdfc76de.vsidx
+/.vs/DIY_dotNET_001/FileContentIndex/ed0099c3-0d35-4d78-833d-74d0cfaba992.vsidx
+/.vs/DIY_dotNET_001/v17/.suo
+*.vsidx
