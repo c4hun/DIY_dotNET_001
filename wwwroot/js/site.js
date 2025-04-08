@@ -29,3 +29,19 @@ function populateForm(i)
         }
     });
 }
+
+function ToggleChange(id, isChecked) {
+    fetch(`/Home/ToggleChange?id=${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ isEnded: isChecked })
+    })
+        .then(response => {
+            if (!response.ok) {
+                alert('Failed to toggle the status.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}

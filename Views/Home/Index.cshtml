@@ -25,6 +25,12 @@
                         <input type="submit" value="Delete" onclick="deleteTodo(@t.Id)"/>
                         <input type="submit" value="Update" onclick="populateForm(@t.Id)"/>
                     </td>
+                    <td>
+                        <input type="checkbox"
+                            class="form-check-input"
+                            @(t.IsEnded ? "checked" : "")
+                            onchange="ToggleChange(@t.Id, this.checked)" />
+                    </td>
                 </tr>
             }
         </table>

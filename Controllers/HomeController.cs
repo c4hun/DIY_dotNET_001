@@ -53,7 +53,8 @@ public class HomeController() : Controller
                                     {
                                         Id = reader.GetInt32(0),
                                         Name = reader.GetString(1),
-                                        CreatedAt = reader.GetDateTime(2)
+                                        CreatedAt = reader.GetDateTime(2),
+                                        IsEnded = reader.GetBoolean(3)
                                     }
                                 );
                             }
@@ -107,7 +108,7 @@ public class HomeController() : Controller
     }
 
     [HttpPost]
-    public RedirectResult Update(TodoItem todo)
+    public IActionResult Update(TodoItem todo)
     {
         using (SqliteConnection con = 
             new SqliteConnection("Data Source=sqlite.db")) {
@@ -123,10 +124,10 @@ public class HomeController() : Controller
                         Console.WriteLine(ex.Message); }
                 }
             }
-        return Redirect("http://localhost:5261/");
+        return RedirectToAction("Index");
     }
 
-    public RedirectResult Insert(TodoItem todo)
+    public IActionResult Insert(TodoItem todo)
     {
         using (SqliteConnection con = 
             new SqliteConnection("Data Source=sqlite.db")) {
@@ -142,7 +143,7 @@ public class HomeController() : Controller
                         Console.WriteLine(ex.Message); }
                 }
             }
-            return Redirect("http://localhost:5261/");
+        return RedirectToAction("Index");
     }
 
     [HttpPost]
@@ -162,14 +163,14 @@ public class HomeController() : Controller
     }
 
     [HttpPost]
-    public IActionResult ToggleIsEnded(int id)
+    public IActionResult ToggleChange(int id)
     {
         using (var connection = new SqliteConnection("Data source=sqlite.db"))
         {
             using (var command = connection.CreateCommand())
             {
                 connection.Open();
-                command.CommandText = "UPDATE todo SET IsEnded = NOT IsEnded WHERE Id = @Id";
+                command.CommandText = "UPDATE todo SET IsEnded = NOT IsEnded WHERE Id = @Id"; // Inverse the value of IsEnded
                 command.Parameters.AddWithValue("@Id", id);
                 command.ExecuteNonQuery();
             }
