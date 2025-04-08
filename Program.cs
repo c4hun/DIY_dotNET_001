@@ -17,7 +17,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 // Default files
-app.UseHttpsRedirection();
+app.UseHttpsRedirection(); // Un DevOps test
 app.UseStaticFiles();
 
 app.UseRouting();
