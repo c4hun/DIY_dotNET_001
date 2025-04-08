@@ -1,0 +1,57 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.background{
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+  .background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://images.pexels.com/photos/9850835/pexels-photo-9850835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    opacity: .1; 
+  }
+
+.buttons.column {
+  text-align: end;
+}
+
+.todos-column{
+  vertical-align: middle;
+}
+
+.createdat-column {
+  color: #555;              
+  font-size: 0.875rem;      
+  opacity: 0.85;            
+  white-space: nowrap;      
+  font-style: italic;       
+  text-align: right;        
+  vertical-align: middle;
+}
