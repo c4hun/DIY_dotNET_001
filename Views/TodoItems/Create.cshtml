@@ -1,0 +1,40 @@
+﻿@model Todo.Models.TodoItem
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TodoItem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" required />
+            </div>
+
+            <div class="form-group">
+                <label for="CreatedAt">Created At</label>
+                <input type="datetime-local" class="form-control" id="CreatedAt" name="CreatedAt" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm")" required />
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="IsEnded" name="IsEnded" />
+                <label class="form-check-label" for="IsEnded">Is Ended</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Create Todo</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

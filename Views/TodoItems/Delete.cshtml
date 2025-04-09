@@ -1,0 +1,12 @@
+﻿@model Todo.Models.ViewModels.TodoViewModel
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Are you sure you want to delete the following task?</label>
+        <p><strong>Name:</strong> @Model.Todo.Name</p>
+        <p><strong>Created At:</strong> @Model.Todo.CreatedAt.ToLocalTime().ToString("MM-dd-yyyy HH:mm:ss")</p>
+        <p><strong>Status:</strong> @(Model.Todo.IsEnded ? "Completed" : "Not Completed")</p>
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "TodoItems")" class="btn btn-secondary">Cancel</a>
+</form>

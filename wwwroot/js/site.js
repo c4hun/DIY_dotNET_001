@@ -1,47 +1,36 @@
-﻿function deleteTodo(i)
-{
-    $.ajax({
-        url: 'Home/Delete',
-        type: 'POST',
-        data: {
-            id: i
-        },
-        success: function() {
-            window.location.reload();
-        }
-    });
+﻿function deleteTodo(id) {
+    if (confirm("Are you sure you want to delete this todo item?")) {
+        // Call your backend to delete the TodoItem
+        window.location.href = '/TodoItems/Delete/' + id; // This should be your delete route
+    }
 }
 
-function populateForm(i)
-{
+function populateForm(id) {
     $.ajax({
-        url: 'Home/PopulateForm',
+        url: '/TodoItems/populateForm', // Adjust the URL to match your action
         type: 'GET',
-        data: {
-            id: i
-        },
-        dataType: 'json',
-        success: function(response) {
+        data: { id: id },
+        success: function (response) {
+            // Populate the form fields with the response
             $("#Todo_Name").val(response.name);
             $("#Todo_Id").val(response.id);
             $("#form-button").val("Update Todo");
-            $("#form-action").attr("action", "/Home/Update");
+            $("#form-action").attr("action", "/TodoItems/Update"); // Adjust action URL for update
         }
     });
 }
 
 function ToggleChange(id, isChecked) {
-    fetch(`/Home/ToggleChange?id=${id}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
+    // Update the 'IsEnded' status via an AJAX request
+    $.ajax({
+        url: '/TodoItems/UpdateStatus', // Adjust the URL
+        type: 'POST',
+        data: { id: id, isEnded: isChecked },
+        success: function () {
+            console.log('Status updated successfully');
         },
-        body: JSON.stringify({ isEnded: isChecked })
-    })
-        .then(response => {
-            if (!response.ok) {
-                alert('Failed to toggle the status.');
-            }
-        })
-        .catch(error => console.error('Error:', error));
+        error: function () {
+            alert('Failed to update the status');
+        }
+    });
 }
