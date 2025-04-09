@@ -11,14 +11,9 @@ using Todo.Models.ViewModels;
 
 namespace Todo.Controllers
 {
-    public class TodoItemsController : Controller
+    public class TodoItemsController(TodoContext context) : Controller
     {
-        private readonly TodoContext _context;
-
-        public TodoItemsController(TodoContext context)
-        { 
-            _context = context;
-        }
+        private readonly TodoContext _context = context;
 
         // GET: TodoItems
         public async Task<IActionResult> Index()
@@ -45,14 +40,14 @@ namespace Todo.Controllers
                 return NotFound();
             }
 
-            var todoItem = await _context.TodoItem
+            var todoViewModel = await _context.TodoItem
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (todoItem == null)
+            if (todoViewModel == null)
             {
                 return NotFound();
             }
 
-            return View(todoItem);
+            return View(todoViewModel);
         } */
 
         // GET: TodoItems/Create
@@ -66,16 +61,16 @@ namespace Todo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CreatedAt,IsEnded")] TodoItem todoItem)
+        public async Task<IActionResult> Create([Bind("Todo")] TodoViewModel todoViewModel)
         {
             if (ModelState.IsValid)
             {
-                todoItem.CreatedAt = DateTime.Now;
-                _context.Add(todoItem);
+                todoViewModel.Todo.CreatedAt = DateTime.Now;
+                _context.Add(todoViewModel.Todo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index)); // Redirect to Index page after creation
             }
-            return View(todoItem);
+            return View(todoViewModel);
         }
 
         // GET: TodoItems/Edit/5
@@ -93,12 +88,13 @@ namespace Todo.Controllers
             }
 
             // Construct the TodoViewModel for the Edit view
-            var viewModel = new TodoViewModel
+            var viewModel = new TodoViewModel 
             {
                 TodoList = await _context.TodoItem.ToListAsync(),
                 Todo = todoItem  // Set the current TodoItem to be edited
             };
 
+            // return View(viewModel.Todo);
             return Json(new { id = todoItem.Id, name = todoItem.Name });
         }
 
@@ -108,19 +104,20 @@ namespace Todo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,Name")] TodoItem todoItem)
+        public async Task<IActionResult> Edit([Bind("Todo")] TodoViewModel todoViewModel)
         {
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(todoItem);
+                    _context.Update(todoViewModel.Todo);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TodoItemExists(todoItem.Id))
+                    /*
+                    if (!TodoItemExists(todoViewModel.Id))
                     {
                         return NotFound();
                     }
@@ -128,10 +125,11 @@ namespace Todo.Controllers
                     {
                         throw;
                     }
+                    */
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(todoItem);
+            return View(todoViewModel);
 
         }
 

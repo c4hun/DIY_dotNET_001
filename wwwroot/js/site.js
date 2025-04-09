@@ -37,12 +37,12 @@ function populateForm(id) {
     
 
 
-function ToggleChange(id, isChecked) {
+function ToggleChange(id) {
     // Update the 'IsEnded' status via an AJAX request
     $.ajax({
-        url: '/TodoItems/UpdateStatus', // Adjust the URL
+        url: '/TodoItems/ToggleChange', // Adjust the URL
         type: 'POST',
-        data: { id: id, isEnded: isChecked },
+        data: { id: id },
         success: function () {
             console.log('Status updated successfully');
         },
