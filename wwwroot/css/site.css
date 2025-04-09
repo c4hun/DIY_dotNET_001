@@ -38,6 +38,43 @@ body {
     opacity: .1; 
   }
 
+.table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.buttons-column input[type=submit] {
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+    .buttons-column input[type=submit]:hover {
+        background-color: #dee2e6;
+    }
+
+.custom-button {
+    background-color: #5F8EC2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+    .custom-button:hover {
+        background-color: #4c78a3; /* darker shade on hover */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(95, 142, 194, 0.4);
+    }
+
+
 .buttons.column {
   text-align: end;
 }
