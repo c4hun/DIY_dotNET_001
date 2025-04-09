@@ -38,7 +38,7 @@ namespace Todo.Controllers
          
         }
 
-        public async Task<IActionResult> Details(int? id)
+        /* public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -53,7 +53,7 @@ namespace Todo.Controllers
             }
 
             return View(todoItem);
-        }
+        } */
 
         // GET: TodoItems/Create
         public IActionResult Create()
@@ -70,10 +70,12 @@ namespace Todo.Controllers
         {
             if (ModelState.IsValid)
             {
+                todoItem.CreatedAt = DateTime.Now;
                 _context.Add(todoItem);
                 await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index)); // Redirect to Index page after creation
             }
-            return RedirectToAction(nameof(Index));
+            return View(todoItem);
         }
 
         // GET: TodoItems/Edit/5
@@ -97,7 +99,7 @@ namespace Todo.Controllers
                 Todo = todoItem  // Set the current TodoItem to be edited
             };
 
-            return View(viewModel);
+            return Json(new { id = todoItem.Id, name = todoItem.Name });
         }
 
 
@@ -106,12 +108,8 @@ namespace Todo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CreatedAt,IsEnded")] TodoItem todoItem)
+        public async Task<IActionResult> Edit([Bind("Id,Name")] TodoItem todoItem)
         {
-            if (id != todoItem.Id)
-            {
-                return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -119,7 +117,6 @@ namespace Todo.Controllers
                 {
                     _context.Update(todoItem);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));  // If successful, redirect to Index
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -132,17 +129,10 @@ namespace Todo.Controllers
                         throw;
                     }
                 }
+                return RedirectToAction(nameof(Index));
             }
+            return View(todoItem);
 
-            // Reconstruct the TodoViewModel to return it back to the view if the model state is invalid
-            var viewModel = new TodoViewModel
-            {
-                TodoList = await _context.TodoItem.ToListAsync(),
-                Todo = todoItem  // The updated TodoItem
-            };
-
-            // Return the view with the viewModel if the edit was not successful
-            return View(viewModel);
         }
 
         // GET: TodoItems/Delete/5

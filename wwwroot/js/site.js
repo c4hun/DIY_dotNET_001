@@ -5,20 +5,37 @@
     }
 }
 
+function resetFormForCreate() {
+    $("#Todo_Name").val('');
+    $("#Todo_Id").val(''); // In case you have a hidden ID input
+    $("#form-button").val("Create Todo");
+    $("#form-action").attr("action", "/TodoItems/Create");
+}
+
 function populateForm(id) {
     $.ajax({
-        url: '/TodoItems/populateForm', // Adjust the URL to match your action
+        url: '/TodoItems/Edit', // Adjust the URL to match your action
         type: 'GET',
         data: { id: id },
         success: function (response) {
-            // Populate the form fields with the response
-            $("#Todo_Name").val(response.name);
-            $("#Todo_Id").val(response.id);
-            $("#form-button").val("Update Todo");
-            $("#form-action").attr("action", "/TodoItems/Update"); // Adjust action URL for update
+            if (response) {
+                // Populate the form fields with the response
+                $("#Todo_Name").val(response.name);
+                $("#Todo_Id").val(response.id);
+                $("#form-button").val("Update Todo");
+                $("#form-action").attr("action", "/TodoItems/Edit"); // Adjust action URL for update
+            } else {
+                alert('Todo item not found :3');
+            }
+        },
+        error: function () {
+            alert('Failed to load Todo item :3');
         }
     });
 }
+
+    
+
 
 function ToggleChange(id, isChecked) {
     // Update the 'IsEnded' status via an AJAX request
