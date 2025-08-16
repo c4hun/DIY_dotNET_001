@@ -1,7 +1,7 @@
 # Ce que j'ai prises:
 ## - Utilisation d’Entity Framework
 ## - Scaffolding CRUD
-## - Problèmes identifiés avec les routes (404) et les vues (_Form.cshtml) 
+## - Problèmes identifiés avec les routes (`404`) et les vues (`_Form.cshtml`) 
 ## - Manipulation de JavaScript pour des interactions dynamiques
 ## - Utilisation de Checkbox + base de données
 
@@ -17,7 +17,7 @@
 # What I have taken:
 ## - Use of Entity Framework
 ## - Scaffolding CRUD
-## - Issues identified with routing (404) and views (_Form.cshtml)
+## - Issues identified with routing (`404`) and views (`_Form.cshtml`)
 ## - Manipulation of JavaScript for dynamic interactions
 ## - Use of Checkbox + database
 
