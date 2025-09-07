@@ -1,0 +1,11 @@
+﻿@using Todo.Models.Interfaces
+
+@model IEnumerable<IUser>
+
+<h2>Liste des utilisateurs</h2>
+<ul>
+    @foreach (var user in Model)
+    {
+        <li>@user.Name (@user.Id)</li>
+    }
+</ul>
