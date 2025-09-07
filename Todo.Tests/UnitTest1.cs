@@ -1,10 +1,24 @@
-﻿namespace Todo.Tests;
+using Xunit;
 
-public class UnitTest1
+namespace XUnitTests
 {
-    [Fact]
-    public void Test1()
+    public class UnitTest1
     {
+        [Fact]
+        public void TestOk()
+        {
+            int a = 5;
+            int b = 5;
+            Assert.Equal(a, b);
+        }
 
+
+        [Fact]
+        public void TestNotOk()
+        {
+            int a = 5;
+            int b = 6;
+            Assert.Equal(a, b);
+        }
     }
 }

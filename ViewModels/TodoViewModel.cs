@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Todo.Models;
 
-namespace Todo.Models.ViewModels // It is a model for the object that you want to bind to your view
+namespace Todo.ViewModels // It is a model for the object that you want to bind to your view
 {
 
     public class TodoViewModel
