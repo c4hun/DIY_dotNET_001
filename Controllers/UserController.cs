@@ -3,14 +3,9 @@ using Todo.Models.Repositories.Interfaces;
 
 namespace Todo.Controllers
 {
-    public class UserController : Controller
+    public class UserController(IUserRepository repo) : Controller
     {
-        private readonly IUserRepository _repo;
-
-        public UserController(IUserRepository repo)
-        {
-            _repo = repo;
-        }
+        private readonly IUserRepository _repo = repo;
 
         public IActionResult Index()
         {
