@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Tests", "Todo.Tests\To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApp", "..\DIY_dotNET_003\AuthApp\AuthApp.csproj", "{D3C2165E-1350-26B6-2F70-4AAB82A62664}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services\Services.csproj", "{FA41E3F5-D6D3-4FD5-9E82-724634E7FC80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories\Repositories.csproj", "{8D4A3765-F451-4CFC-A6F1-F741A4962E6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA41E3F5-D6D3-4FD5-9E82-724634E7FC80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA41E3F5-D6D3-4FD5-9E82-724634E7FC80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA41E3F5-D6D3-4FD5-9E82-724634E7FC80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA41E3F5-D6D3-4FD5-9E82-724634E7FC80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4A3765-F451-4CFC-A6F1-F741A4962E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4A3765-F451-4CFC-A6F1-F741A4962E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4A3765-F451-4CFC-A6F1-F741A4962E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4A3765-F451-4CFC-A6F1-F741A4962E6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

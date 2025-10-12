@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -28,6 +28,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DIY_dotNET_003\AuthApp\AuthApp.csproj" />
+	<ProjectReference Include="..\DIY_dotNET_001\Repositories\Repositories\Repositories.csproj" />
+	<ProjectReference Include="..\DIY_dotNET_001\Services\Services\Services.csproj" />
   </ItemGroup>
 
   
