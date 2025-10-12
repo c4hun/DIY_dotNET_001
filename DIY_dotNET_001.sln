@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo", "Todo.csproj", "{F2B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Tests", "Todo.Tests\Todo.Tests.csproj", "{BA8300B9-0D30-4F15-8724-71E0013ADC15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthApp", "..\DIY_dotNET_003\AuthApp\AuthApp.csproj", "{D3C2165E-1350-26B6-2F70-4AAB82A62664}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA8300B9-0D30-4F15-8724-71E0013ADC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA8300B9-0D30-4F15-8724-71E0013ADC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA8300B9-0D30-4F15-8724-71E0013ADC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C2165E-1350-26B6-2F70-4AAB82A62664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
